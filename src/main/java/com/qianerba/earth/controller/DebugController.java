@@ -21,6 +21,7 @@ public class DebugController {
 
     @GetMapping(value = "/alive", produces = MediaType.TEXT_PLAIN_VALUE)
     public String helloGuys(HttpServletRequest request) {
+        log.info("test log info");
         return "Hi guys, system alive until " + LocalDateTime.now();
     }
 }
